@@ -1,0 +1,211 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+  box-sizing: border-box;
+  font-weight: 400;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+  --color-primary: #ff8c00;
+  --color-red: #ff0000;
+  --color-green: #00ff00;
+  --color-grey-dark: #333;
+  --color-white: #fff;
+}
+
+body {
+  background-color: var(--color-grey-dark);
+  color: var(--color-white);
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  overflow-x: hidden;
+  width: auto;
+}
+
+a {
+  color: var(--color-white);
+}
+
+main {
+  border-top: 1px solid var(--color-primary);
+}
+
+.container {
+  margin: 2rem auto;
+  max-width: 80%;
+}
+
+.nav__list {
+  align-items: center;
+  border-bottom: 1px solid var(--color-primary);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  border: 1px solid var(--color-grey-dark);
+  padding: 2rem;
+}
+
+.nav__link:hover,
+.current {
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  color: var(--color-primary);
+  transition: all .5s;
+}
+
+.ticker {
+  box-sizing: content-box;
+  padding: .5rem 100% .5rem 0;
+  white-space: nowrap;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 20s;
+}
+
+#ticker__company {
+  display: inline-block;
+}
+
+/*  Portfolio Page */
+.ticker__title {
+  color: var(--color-primary);
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.search {
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+#search__text {
+  margin: 0 1rem;
+  width: 40%;
+}
+
+#search__btn {
+  font-size: 1.25rem;
+  padding: .5rem 1.5rem;
+}
+
+table {
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+th {
+  /* border-bottom: 1px solid var(--color-primary); */
+  color: var(--color-primary);
+  padding: .75rem 2rem;
+}
+
+td {
+  padding: .75rem 1rem;
+}
+
+/*  Login Page */
+button {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+button:active {
+  transform: translateY(5px);
+}
+
+label {
+  padding-left: .75rem;
+}
+
+input {
+  font-size: 1.25rem;
+  margin-top: .5rem;
+  padding: .5rem;
+  width: 100%;
+}
+
+.login {
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  max-width: 30%;
+  text-transform: uppercase;
+}
+
+.form__image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: .5rem;
+}
+
+.error {
+  color: var(--color-red);
+  font-size: .75rem;
+  padding: .5rem .75rem;
+  visibility: hidden;
+}
+
+.submit {
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.terms {
+  font-size: .75rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.terms__link {
+  display: block;
+  padding-top: .5rem;
+}
+
+/* Keyframes */
+@keyframes ticker {
+  0% {
+    transform: translate3d(95%, 0, 0);
+    opacity: 0;
+  }
+
+  5% {
+    transform: translate3d(90%, 0, 0);
+    opacity: 1;
+  }
+
+  95% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(-5%, 0, 0);
+    opacity: 0
+  }
+}

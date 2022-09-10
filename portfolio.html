@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" href="img/sc-icon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="style.css" />
+  <title>Stock Chaser</title>
+</head>
+
+<body class="container">
+  <nav>
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#"><img class="nav__logo" src="img/sc-logo.png" alt=""></a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Indices</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Commodities</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Crypto</a></li>
+      <li class="nav__item"><a href="portfolio.html" class="nav__link current">Portfolio</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">News</a></li>
+      <li class="nav__item"><a href="login.html" class="nav__link">Log in</a></li>
+    </ul>
+  </nav>
+  <div class="ticker">
+    <p id="ticker__company"></p>
+  </div>
+  <main class="portfolio__main">
+    <div class="container">
+      <h3 class="ticker__title">Add Ticker to your portfolio</h3>
+      <div class="search">
+        <label for="text" class="search__label">Symbol: </label>
+        <input type="text" id="search__text" placeholder="Ticker Symbol"
+          oninput="this.value = this.value.toUpperCase()">
+        <button id="search__btn">Add Ticker</button>
+      </div>
+    </div>
+    <table id="portfolioTable">
+      <thead id="head">
+        <tr>
+          <th>Company Name</th>
+          <th>Ticker</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
